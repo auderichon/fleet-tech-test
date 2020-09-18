@@ -1,0 +1,11 @@
+.hovered:hover {
+  cursor: grab;
+  color: #0ed58e;
+}
+
+#highlighted {
+  background-color: #c4f8e6;
+  color: #0ed58e;
+  border-radius: 5px;
+  padding-left: 5px;
+}
