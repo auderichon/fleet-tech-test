@@ -11,17 +11,17 @@ class searchBar extends Component {
 
   render() {
     return (
-      <div class="tile is-child box">
-        <p class="control has-icons-right">
+      <div className="tile is-child box" id="searchBar">
+        <p className="control has-icons-right">
           <input
-            class="input"
+            className="input"
             type="text"
             placeholder="Look for a movie here"
             value={this.props.searchValue}
             onChange={this.handleSearch}
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-search"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-search"></i>
           </span>
         </p>
       </div>
