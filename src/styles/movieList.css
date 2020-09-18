@@ -9,3 +9,10 @@
   border-radius: 5px;
   padding-left: 5px;
 }
+
+@media screen and (max-width: 768px) {
+  .mobile-display {
+    max-height: 200px;
+    overflow: scroll;
+  }
+}

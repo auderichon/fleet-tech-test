@@ -1,22 +1,15 @@
 import React, { Component } from "react";
 
-import movies from "./../movies.json";
-
 import "./../styles/Movie.css";
 
 class movieBlock extends Component {
   render() {
-    if (this.props.movieId === null) {
+    if (this.props.movieDetails === null) {
       return null;
     }
 
-    let movie = movies.results.filter(
-      (movie) => movie.id === this.props.movieId
-    );
-    movie = movie[0];
-
+    let movie = this.props.movieDetails;
     let movieUrl = "https://image.tmdb.org/t/p/original" + movie.poster_path;
-    console.log(movieUrl);
 
     return (
       <div className="tile is-parent" id="movie">

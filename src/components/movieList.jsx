@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-import movies from "./../movies.json";
+
 import "./../styles/movieList.css";
 import "bulma/css/bulma.css";
 
@@ -11,12 +10,12 @@ class movieList extends Component {
   };
 
   render() {
-    const filteredMovies = movies.results.filter((movie) =>
+    const filteredMovies = this.props.movieList.filter((movie) =>
       movie.title.toLowerCase().includes(this.props.searchValue.toLowerCase())
     );
 
     return (
-      <div className="tile is-child box">
+      <div className="tile is-child box mobile-display">
         <ul>
           {filteredMovies.map((movie) => (
             <li
