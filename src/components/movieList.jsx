@@ -4,8 +4,6 @@ import movies from "./../movies.json";
 import "./../styles/movieList.css";
 import "bulma/css/bulma.css";
 
-let moviesList = JSON.parse(JSON.stringify(movies.results));
-
 class movieList extends Component {
   handleClick = (event) => {
     let value = event.target.value;
@@ -13,8 +11,7 @@ class movieList extends Component {
   };
 
   render() {
-    const copy = [...moviesList];
-    const filteredMovies = copy.filter((movie) =>
+    const filteredMovies = movies.results.filter((movie) =>
       movie.title.toLowerCase().includes(this.props.searchValue.toLowerCase())
     );
 
